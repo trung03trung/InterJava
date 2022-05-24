@@ -1,5 +1,6 @@
 package QLTV;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Menu {
@@ -48,6 +49,7 @@ public class Menu {
                 System.out.println("5. Lap phieu muon");
                 System.out.println("6. Sap xep theo ten ban doc");
                 System.out.println("7. Sap xep theo so luong sach duoc muon giam dan");
+                System.out.println("8. Tim kiem muon sac theo ten ban doc");
                 System.out.println("0. Thoat");
                 System.out.println("-----------------");
                 System.out.print("Ban chon (0->10):");
@@ -86,9 +88,13 @@ public class Menu {
                     case 7:
                         sxTheoSL();
                         xuatQLMS();
+                        break;
+                    case 8:
+                        searchByName();
+                        break;
 
                     default:
-                        System.out.println("Chi chon tu 0->7");
+                        System.out.println("Chi chon tu 0->8");
                         break;
                 }
 
@@ -268,5 +274,20 @@ public class Menu {
                 }
             }
         }
+    }
+    public static void searchByName(){
+        System.out.print("Nhap ten ban doc muon tim kiem: ");
+        Scanner sc=new Scanner(System.in);
+        String keyword=sc.nextLine();
+        boolean c=false;
+        for(int i=0;i<indexql;i++){
+            if(ql[i].getBanDoc().getHoten().toLowerCase().contains(keyword.toLowerCase())) {
+                System.out.println(ql[i]);
+                c=true;
+            }
+
+        }
+        if(c==false)
+            System.out.println("Khong tim thay ban doc nao!!!");
     }
 }

@@ -2,20 +2,18 @@ package QLTV;
 
 import java.util.Scanner;
 
-public class BanDoc {
+public class BanDoc extends Person {
     public static final String SV="Sinh vien";
     public static final String HVCH="Hoc vien cao hoc";
     public static final String GV="Giao vien";
 
 
-    private int ma;
-    private String hoten;
-    private String diachi;
-    private String sdt;
+
     private String loai;
 
     private static int idAuto=-1;
     public BanDoc(){
+        super();
         if(idAuto==-1){
             idAuto=10000;
             ma=idAuto;
@@ -65,37 +63,7 @@ public class BanDoc {
 
 
 
-    public int getMa() {
-        return ma;
-    }
 
-    public void setMa(int ma) {
-        this.ma = ma;
-    }
-
-    public String getHoten() {
-        return hoten;
-    }
-
-    public void setHoten(String hoten) {
-        this.hoten = hoten;
-    }
-
-    public String getDiachi() {
-        return diachi;
-    }
-
-    public void setDiachi(String diachi) {
-        this.diachi = diachi;
-    }
-
-    public String getSdt() {
-        return sdt;
-    }
-
-    public void setSdt(String sdt) {
-        this.sdt = sdt;
-    }
 
     public String getLoai() {
         return loai;

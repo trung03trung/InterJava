@@ -1,5 +1,7 @@
 package QLTV;
 
+import java.util.Arrays;
+
 public class QLMuonSach {
     BanDoc banDoc;
     MuonSach[] muonSach;
@@ -20,4 +22,11 @@ public class QLMuonSach {
         this.muonSach = muonSach;
     }
 
+    @Override
+    public String toString() {
+        return "QLMuonSach{" +
+                "banDoc=" + banDoc +
+                ", muonSach=" + Arrays.toString(muonSach) +
+                '}';
+    }
 }
