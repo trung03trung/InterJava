@@ -16,10 +16,7 @@ public class Main {
     public static Teaching[] teachings=new Teaching[100];
     public static int index=0;
     public static void main(String[] args) {
-        teachers[0]=new Teacher("Le Van Trung","Vĩnh phúc","0123456", TeacherLevel.TS);
-        teachers[1]=new Teacher("Tran Thi Ngoc","Hà Nội","0123434", TeacherLevel.GS_TS);
-        subjects[0]=new Subject("Toan",35,30,200000);
-        subjects[1]=new Subject("Tieng Anh",32,30,210000);
+
         while (true){
             System.out.println("-------Phần mềm quản lý trả lương cho giảng viên thỉng giảng-------");
             System.out.println("1.Nhập môn học mới");
